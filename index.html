@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Portal KGH</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <style>
-        body { 
-            margin: 0; 
-            padding: 0; 
-            overflow: hidden; 
-            background-color: #f8f9fa; /* Samakan dengan warna background app */
+        /* Reset agar tidak ada margin bawaan */
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* PENTING: Mencegah scroll pada body utama */
+            background-color: #f8f9fa;
         }
+
+        /* Iframe dipaksa menempel ke 4 sisi layar */
         iframe {
-            display: block;
+            position: fixed; /* KUNCI UTAMA: Fixed position agar tidak terdorong address bar */
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
             border: none;
-            width: 100vw;
-            
-            /* INI KUNCINYA: Gunakan 100dvh (Dynamic Viewport Height) */
-            /* Agar pas di layar HP meski ada address bar Chrome */
-            height: 100vh; 
-            height: 100dvh; 
+            z-index: 1;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://script.google.com/macros/s/AKfycbyZwLQhyhKDdxDxwkb9B42Gf6Wuftkr2nFeIoNhqIEQXm_7-dqoVVB9796L7ayfeqQo/exec"></iframe>
+    <iframe src="https://script.google.com/macros/s/AKfycbzQa1JQB5RnSLeBf2cvIIvuAaNHnF1Sl1u_AhkDZ02sdaCK7yJcgQgVvbNQollIzCDh/exec"></iframe>
 </body>
 </html>
