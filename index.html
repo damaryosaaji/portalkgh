@@ -4,13 +4,21 @@
     <title>Portal KGH</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <style>
-        body { margin: 0; padding: 0; overflow: hidden; }
+        body { 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
+            background-color: #f8f9fa; /* Samakan dengan warna background app */
+        }
         iframe {
             display: block;
-            background: #fff;
             border: none;
-            height: 100vh;
             width: 100vw;
+            
+            /* INI KUNCINYA: Gunakan 100dvh (Dynamic Viewport Height) */
+            /* Agar pas di layar HP meski ada address bar Chrome */
+            height: 100vh; 
+            height: 100dvh; 
         }
     </style>
 </head>
